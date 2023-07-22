@@ -1,0 +1,621 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.header-1,
+.home,
+.bloco,
+.produtos {
+    padding: 0 7rem;
+}
+
+.main {
+    background: #010103;
+}
+
+.header-1 {
+    position: fixed;
+    width: 100%;
+    right: 0;
+    top: 0;
+    background: #0096ff;
+    padding: 14px 0 10xp 0;
+    z-index: 10;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu h4,
+.menu h3 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.menu .icon img {
+    width: 4rem;
+    height: 2.5rem;
+    filter: invert(1);
+    display: none;
+    cursor: pointer;
+}
+
+.navbar { 
+    margin-right: 10rem;
+}
+
+.navbar a {
+    margin: 0 1rem;
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+    transition: 2s linear;
+}
+
+.navbar .active {
+    color: #010103;
+    border-bottom: 0.2rem solid rgba(31, 30, 30, 0.6);
+    padding-bottom: .2rem;
+}
+
+/* .navbar a:hover {
+    color: #010103;
+    border-bottom: 0.2rem solid rgba(31, 30, 30, 0.6);
+    padding-bottom: .2rem;
+} */
+
+.caixa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.logo  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    height: 12%;
+    padding: 10px;
+    background: #6001d2;
+    cursor: pointer;
+}
+
+.logo img {  
+    filter: invert(1);
+}
+
+.caixa input {
+    width: 50%;
+    padding: 10px;
+    background: #fff;
+    outline: none;
+    border: none;
+    font-size: rem;
+    font-weight: 600;
+}
+
+/* inicio hom */
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(../img/background.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content {
+    max-width: 60rem;
+}
+
+.home .content h3 {
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.home .content p {
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #eee;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    color: #d3ad7f;
+    cursor: pointer;
+}
+/* fim home */
+/* inicio sobre */
+.sobre .container .bloco{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.title {
+    margin-top: 25px;
+    padding: 5px;
+    width: 100%;
+    font-size: 2rem;
+    padding: 0 7rem;
+}
+
+.sobre .container .title {
+    margin-top: 25px;
+    padding: 5px;
+    width: 100%;
+    font-size: 2rem;
+    padding: 0 7rem;
+}
+
+.sobre .container .text p {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.sobre .container button {
+    width: 20rem;
+    padding: 10px;
+    margin-top: 2rem;
+    border-radius: 8px;
+    background: #0096ff;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.sobre .container .imagem img {
+    width: 60rem;
+    height: 40rem;
+    object-fit: cover;
+    border: 1px solid #0096ff;
+}
+
+.sobre .container .bloco .imagem{
+    position: relative;
+    outline: 4px solid transparent;
+}
+
+.sobre .container .bloco .imagem span {
+    font-size: 2rem;
+    display: block;
+    width: 100%;
+    padding: 2.4rem;
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(to bottom, transparent, black 80%);
+    visibility: hidden;
+    opacity: 0;
+    color: #fff;
+    transition: all .4s;
+}
+
+.sobre .container .bloco .imagem:hover span {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* fim sobre */
+
+/* inicio do corpo */
+.assed {
+    background: #eaeaff;
+    font-size: 2rem;
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+
+}
+
+.main .produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.produtos .rows .row {
+    border: 2px solid #0096ff;
+    margin-bottom: 3rem;
+}
+
+.produtos .rows .row .imagem {
+    height: 25rem;
+    overflow: hidden;
+    width: 100%;
+}
+
+.produtos .rows .row .imagem img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    transition: 2s linear;
+}
+
+.produtos .rows .row:hover .imagem img {
+    transform: scale(1.3);
+}
+
+.produtos .rows .row .text {
+    padding: 2rem;
+    color: #ffff;
+}
+
+.produtos .rows .row .text span{
+    font-size: 4rem;
+}
+
+.rows .row .text h4 {
+    padding-left: .2rem;
+    font-size: 3rem;
+}
+
+.rows .row .text {
+    padding: 10px;
+    color: #ffff;
+    display: inline-block;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.rows .row .precos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rows .row .text .tamanho h3 {
+    font-size: 2rem;
+}
+
+.rows .row .text .precos span {
+    font-size: 1.5rem;
+}
+
+.rows .row .precos h4{
+    font-size: 1.8rem;
+    padding-left: 1rem;
+}
+
+.rows .row button {
+    width: 100%;
+    padding: 10px;
+    background: #0096ff;
+    border: none;
+    border-radius: 10px;
+    margin-top: 1.2rem;
+    color: white;
+}
+/* fim do corpo */
+
+/* inicion do registion */
+
+.registion {
+    /* background: #4070f4; */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario {
+    position: relative;
+    max-width: 1320px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 25px;
+    margin: 0 15px;
+    /* background: #fff; */
+}
+
+.formulario header {
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+.formulario header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 3px;
+    width: 27px;
+    border-radius: 8px;
+    background: #4070f4;
+}
+
+.formulario form {
+    position: relative;
+    margin-top: 16px;
+    min-height: 400px;
+    background: #fff;
+}
+
+.formulario form .form {
+    position: absolute;
+    background: #fff;
+}
+
+.formulario form .title {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
+}
+
+.formulario form .fields {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.formulario .fields .input-field {
+    display: flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+
+.container .fields .input-field label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+
+.container .fields .input-field input {
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+
+form .fields .input-field input:is(:focus, :valid){
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+    border: 1px solid #2e2e;
+}
+
+form .fields .input-field input[type="date"]{
+    color: #707070;
+}
+
+form .fields .input-field input[type="date"]:valid{
+    color: #333;
+}
+
+.container form button, .backBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    padding: 12px 35px;
+    background: #4070f4;
+    cursor: pointer;
+}
+.container form button,
+.container form .backBtn {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+form button:hover {
+    background: #365df2;
+}
+
+form .buttons {
+    display: flex;
+    align-items: center;
+}
+
+form .buttons, .backBtn {
+    margin-right: 14px;
+}
+/* fim do registion */
+
+
+/* footer */
+
+footer {
+    position: relative;
+    bottom: 0;
+    background: #0096ff;
+    width: 100%;
+    padding: 2rem;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+}
+
+footer h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2rem;
+}
+
+
+
+@media (max-width: 991px) {
+
+    html {
+        font-size: 55%;
+    }
+        
+    .produtos .rows .row .text span{
+        font-size: 2rem;
+    }
+
+    .rows .row .text h4 {
+        font-size: 1.7rem;
+    }
+
+    .rows .row .text .tamanho h3 {
+        font-size: 1.8rem;
+    }
+
+    .rows .row .text .precos span {
+        font-size: 1rem;
+    }
+
+    .rows .row .precos h4{
+        font-size: 1.4rem;
+    }
+    
+    .sobre .container .imagem img {
+        width: 38rem;
+        height: 40rem;
+        object-fit: cover;
+        border: 1px solid #0096ff;
+    }
+}
+
+@media (max-width:768px) {
+    .header .cell a {
+        display: block;
+        font-size: 3rem;
+    }
+    
+    .header .cell {
+        position: absolute;
+       background: #f4436f;
+       height: 100vh;
+       width: 330px;
+       top: 0;
+       right: -500px;
+       text-align: left;
+       z-index: 2;
+       transition: 1.5s ease;
+    }
+
+    .navbar .icon img {
+        margin-left: 10px;
+    }
+
+    .menu .icon img{
+        display: block;   
+        width: 4rem;
+        height: 4rem;
+        filter: invert(1);
+        cursor: pointer;
+    }
+
+    .navbar a {
+        padding:  10px;
+        margin: 30px;
+    }
+    
+}
+
+@media (max-width:768px) {
+
+    .header-1,
+    .home,
+    .bloco,
+    .produtos {
+        padding: 0 2rem;
+    }
+
+    .menu h3 {
+        display: none;
+    }
+
+    .home {
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home .content h3 {
+       font-size: 4rem;
+    }
+
+    .home .content p {
+       font-size: 2rem;
+    }
+
+    .sobre .container .bloco {
+        display: block;
+    }
+
+    .sobre .container .imagem img {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    
+}
+
+@media (max-width: 474px) {
+    .container .fields .input-field {
+        width: 100%;
+    }
+
+    .registion {
+        margin-top: -15rem;
+        margin-bottom: 10rem;
+    }
+}
+
+@media (max-width: 1147px) {
+    .produtos .rows .row .text span{
+        font-size: 1rem;
+    }
+
+    .rows .row .text h4 {
+        font-size: 1.7rem;
+    }
+
+    .rows .row .text .tamanho h3 {
+        font-size: 1.8rem;
+    }
+
+    .rows .row .text .precos span {
+        font-size: 1rem;
+    }
+
+    .rows .row .precos h4{
+        font-size: 1.4rem;
+    }
+}
